@@ -1,0 +1,308 @@
+/* ==========================================================
+   NOVA ID — PRINT / SAVE PDF
+   Full Portrait Credential — A4 Print Layout
+   ========================================================== */
+
+@media print {
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ==========================================================
+     HIDE WEBSITE UI
+     ========================================================== */
+
+  .app-header,
+  .hero-section,
+  .identity-builder-panel,
+  .stage-telemetry-header,
+  .interactive-hint,
+  .stage-action-toolbar,
+  .toast-container,
+  .app-footer,
+  .no-print {
+    display: none !important;
+  }
+
+  /* ==========================================================
+     MAIN PRINT AREA
+     ========================================================== */
+
+  .app-layout {
+    display: block !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .workspace-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .workspace-grid {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card-stage-wrapper {
+    display: block !important;
+    width: 100% !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .credential-stage-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 7mm !important;
+  }
+
+  /* ==========================================================
+     PRINT HEADER
+     ========================================================== */
+
+  .print-document-header {
+    display: block !important;
+    order: 1 !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 0 7mm 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-document-title {
+    display: block !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 17pt !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    color: #111111 !important;
+    margin: 0 0 3mm 0 !important;
+  }
+
+  .print-document-sub {
+    display: block !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 8pt !important;
+    line-height: 1.3 !important;
+    color: #666666 !important;
+    letter-spacing: 0.08em !important;
+    margin: 0 !important;
+  }
+
+  /* ==========================================================
+     CARD SCENE
+     ========================================================== */
+
+  .card-scene {
+    order: 2 !important;
+
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    perspective: none !important;
+
+    transform: none !important;
+
+    position: relative !important;
+
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* ==========================================================
+     FRONT + BACK SIDE BY SIDE
+     ========================================================== */
+
+  .card-flipper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    gap: 10mm !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    position: relative !important;
+
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* ==========================================================
+     FULL PORTRAIT ID CARD
+     
+     Original design ratio:
+     320px × 510px
+     
+     Printed ratio:
+     86mm × 137mm
+     ========================================================== */
+
+  .card-face {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 86mm !important;
+    height: 137mm !important;
+
+    min-width: 86mm !important;
+    min-height: 137mm !important;
+
+    max-width: 86mm !important;
+    max-height: 137mm !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+
+    border: 1px solid #222222 !important;
+    border-radius: 3mm !important;
+
+    overflow: hidden !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* ==========================================================
+     FORCE BOTH CARD SIDES TO BE VISIBLE
+     ========================================================== */
+
+  .card-face-front,
+  .card-face-back {
+    position: relative !important;
+
+    transform: none !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+
+    display: block !important;
+  }
+
+  /* ==========================================================
+     DISABLE 3D / INTERACTIVE EFFECTS
+     ========================================================== */
+
+  .card-glare {
+    display: none !important;
+  }
+
+  .holographic-strip {
+    display: none !important;
+  }
+
+  /* Keep background artwork */
+  .card-grid-layer {
+    display: block !important;
+  }
+
+  .card-abstract-watermark {
+    display: block !important;
+  }
+
+  .photo-holo-overlay {
+    display: block !important;
+  }
+
+  /* ==========================================================
+     PREVENT CONTENT FROM BEING CUT
+     ========================================================== */
+
+  .card-front-content,
+  .card-back-content {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* ==========================================================
+     REMOVE HOVER / SCREEN TRANSFORMS
+     ========================================================== */
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* ==========================================================
+     PRINT SAFETY
+     ========================================================== */
+
+  .card-stage-wrapper,
+  .credential-stage-panel,
+  .card-scene,
+  .card-flipper,
+  .card-face {
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+    page-break-inside: avoid !important;
+    break-before: auto !important;
+    break-after: auto !important;
+    break-inside: avoid !important;
+  }
+}
+
+/* ==========================================================
+   PRINT HEADER HIDDEN ON NORMAL WEBSITE
+   ========================================================== */
+
+.print-document-header {
+  display: none;
+}

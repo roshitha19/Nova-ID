@@ -1,0 +1,141 @@
+:root {
+  /* ==========================================================
+     CHROMATIC NOIR CORE PALETTE
+     Deep charcoal base with subtle green undertone & antique metallic accents
+     ========================================================== */
+  --bg-primary: #090B0A;
+  --bg-secondary: #111513;
+  --bg-surface: #171C19;
+  --bg-tertiary: #1C2320;
+  --bg-card-glass: rgba(17, 21, 19, 0.88);
+  --bg-card-glass-hover: rgba(23, 28, 25, 0.94);
+
+  --text-primary: #F4F0E6;
+  --text-secondary: #A8AEA6;
+  --text-tertiary: #6E756C;
+  --text-inverse: #090B0A;
+
+  /* Accents */
+  --accent-gold: #D6A85F;        /* Antique metallic gold */
+  --accent-gold-glow: rgba(214, 168, 95, 0.2);
+  --accent-jade: #86A897;        /* Muted jade */
+  --accent-jade-glow: rgba(134, 168, 151, 0.2);
+  --accent-coral: #D78C78;       /* Dusty coral */
+  --accent-coral-glow: rgba(215, 140, 120, 0.2);
+  --accent-cyan: #8FC8C1;        /* Subtle blue-green highlight */
+  --accent-cyan-glow: rgba(143, 200, 193, 0.2);
+
+  /* Legacy aliases for backward compatibility */
+  --accent-copper: var(--accent-gold);
+  --accent-copper-glow: var(--accent-gold-glow);
+  --accent-green: var(--accent-jade);
+  --accent-green-glow: var(--accent-jade-glow);
+  --accent-lilac: var(--accent-coral);
+  --accent-lilac-glow: var(--accent-coral-glow);
+
+  /* Precise editorial borders */
+  --border-subtle: rgba(244, 240, 230, 0.07);
+  --border-medium: rgba(244, 240, 230, 0.13);
+  --border-strong: rgba(244, 240, 230, 0.24);
+  --border-active: var(--accent-gold);
+
+  /* Elevated Shadows */
+  --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --shadow-elevated: 0 18px 48px rgba(0, 0, 0, 0.65);
+  --shadow-card-3d: 0 35px 80px -15px rgba(0, 0, 0, 0.85);
+
+  /* Typography */
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Enlarged Star Proportions */
+  --card-width: 370px;
+  --card-height: 580px;
+  --card-radius: 18px;
+
+  /* UI Transitions */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 480ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-card-flip: 750ms cubic-bezier(0.34, 1.25, 0.64, 1);
+}
+
+/* Warm Editorial Light Mode */
+[data-theme-mode="light"] {
+  --bg-primary: #F4F1EA;
+  --bg-secondary: #E9E4D8;
+  --bg-surface: #DFD9CB;
+  --bg-tertiary: #D6CEBD;
+  --bg-card-glass: rgba(244, 241, 234, 0.92);
+  --bg-card-glass-hover: rgba(255, 255, 255, 0.98);
+
+  --text-primary: #121614;
+  --text-secondary: #57605A;
+  --text-tertiary: #838C84;
+  --text-inverse: #F4F1EA;
+
+  --accent-gold: #B68638;
+  --accent-gold-glow: rgba(182, 134, 56, 0.16);
+  --accent-jade: #5A7E6C;
+  --accent-jade-glow: rgba(90, 126, 108, 0.16);
+  --accent-coral: #BF6A54;
+  --accent-coral-glow: rgba(191, 106, 84, 0.16);
+  --accent-cyan: #357F76;
+  --accent-cyan-glow: rgba(53, 127, 118, 0.18);
+
+  --border-subtle: rgba(18, 22, 20, 0.08);
+  --border-medium: rgba(18, 22, 20, 0.15);
+  --border-strong: rgba(18, 22, 20, 0.28);
+  --border-active: var(--accent-gold);
+
+  --shadow-subtle: 0 4px 20px rgba(18, 22, 20, 0.06);
+  --shadow-elevated: 0 16px 40px rgba(18, 22, 20, 0.12);
+  --shadow-card-3d: 0 25px 60px -15px rgba(18, 22, 20, 0.22);
+}
+
+/* ==========================================================
+   THEMES: AURORA, ARCHIVE, EMBER
+   ========================================================== */
+
+/* 1. AURORA: Deep charcoal + jade + soft cyan */
+.theme-aurora {
+  --card-bg: linear-gradient(155deg, #101613 0%, #0A0F0C 55%, #131A16 100%);
+  --card-border: rgba(134, 168, 151, 0.36);
+  --card-accent: #86A897;
+  --card-accent-secondary: #8FC8C1;
+  --card-highlight: #8FC8C1;
+  --card-mesh-opacity: 0.14;
+  --card-badge-bg: rgba(134, 168, 151, 0.15);
+  --card-badge-border: rgba(134, 168, 151, 0.4);
+  --card-chip-gold: #96BAA7;
+  --card-foil-gradient: linear-gradient(115deg, transparent 20%, rgba(143, 200, 193, 0.28) 45%, rgba(134, 168, 151, 0.35) 55%, transparent 75%);
+}
+
+/* 2. ARCHIVE: Warm ivory + antique gold + graphite */
+.theme-archive {
+  --card-bg: linear-gradient(155deg, #171614 0%, #0F0E0C 55%, #1B1916 100%);
+  --card-border: rgba(214, 168, 95, 0.42);
+  --card-accent: #D6A85F;
+  --card-accent-secondary: #F4F0E6;
+  --card-highlight: #E8CA97;
+  --card-mesh-opacity: 0.12;
+  --card-badge-bg: rgba(214, 168, 95, 0.16);
+  --card-badge-border: rgba(214, 168, 95, 0.42);
+  --card-chip-gold: #D6A85F;
+  --card-foil-gradient: linear-gradient(115deg, transparent 20%, rgba(244, 240, 230, 0.25) 45%, rgba(214, 168, 95, 0.38) 55%, transparent 75%);
+}
+
+/* 3. EMBER: Deep charcoal + dusty coral + copper */
+.theme-ember {
+  --card-bg: linear-gradient(155deg, #181211 0%, #0F0A09 55%, #1D1412 100%);
+  --card-border: rgba(215, 140, 120, 0.38);
+  --card-accent: #D78C78;
+  --card-accent-secondary: #E8B4A7;
+  --card-highlight: #E8B4A7;
+  --card-mesh-opacity: 0.13;
+  --card-badge-bg: rgba(215, 140, 120, 0.16);
+  --card-badge-border: rgba(215, 140, 120, 0.4);
+  --card-chip-gold: #D89882;
+  --card-foil-gradient: linear-gradient(115deg, transparent 20%, rgba(232, 180, 167, 0.28) 45%, rgba(215, 140, 120, 0.38) 55%, transparent 75%);
+}
